@@ -15,13 +15,13 @@ void Sprite::init(float x, float y, int width,
 	_y = y;
 	_width = width;
 	_height = height;
-
-	if (_vobID == 0) {
+	if (_vobID == 0)
 		glGenBuffers(1, &_vobID);
-	}
-
 	_texture = ResourceManager::getTexture(texturePath);
+}
 
+void Sprite::draw(float time)
+{	
 	Vertex vertexData[6];
 	vertexData[0].setUV(1.0f, 1.0f);
 	vertexData[1].setUV(0.0f, 1.0f);
@@ -29,36 +29,25 @@ void Sprite::init(float x, float y, int width,
 	vertexData[3].setUV(0.0f, 0.0f);
 	vertexData[4].setUV(1.0f, 0.0f);
 	vertexData[5].setUV(1.0f, 1.0f);
-
-	vertexData[0].setPosition(_x + _width, _y + _height);
-	
-	vertexData[1].setPosition(_x, _y + _height);
-	
-	vertexData[2].setPosition(_x, _y);
-	
-	vertexData[3].setPosition(_x, _y);
-	vertexData[4].setPosition(_x + _width, _y);
-	vertexData[5].setPosition(_x + _width, _y + _height);
+	float xcoord = _x-fmod(time*0.2,4.0)-1.0;
+	vertexData[0].setPosition(xcoord+ _width, _y + _height);
+	vertexData[1].setPosition(xcoord, _y + _height);
+	vertexData[2].setPosition(xcoord, _y);
+	vertexData[3].setPosition(xcoord, _y);
+	vertexData[4].setPosition(xcoord + _width, _y);
+	vertexData[5].setPosition(xcoord + _width, _y + _height);
 
 
 	for (int i = 0; i < 6; i++)
-	{
 		vertexData[i].setColor(255, 0, 0, 255);
-	}
 
 	vertexData[1].setColor(0, 0, 255, 255);
 	vertexData[4].setColor(0, 255, 0, 255);
 
-	glBindBuffer(GL_ARRAY_BUFFER, _vobID);
-	glBufferData(GL_ARRAY_BUFFER, sizeof(vertexData), 
-					vertexData, GL_STATIC_DRAW);
-	glBindBuffer(GL_ARRAY_BUFFER, 0);
-}
-
-void Sprite::draw()
-{
 	glBindTexture(GL_TEXTURE_2D, _texture.id);
 	glBindBuffer(GL_ARRAY_BUFFER, _vobID);
+	glBufferData(GL_ARRAY_BUFFER, sizeof(vertexData),vertexData, GL_DYNAMIC_DRAW);
+
 	glEnableVertexAttribArray(0);
 	//primer atributo position
 	glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, sizeof(Vertex), 
@@ -76,6 +65,7 @@ void Sprite::draw()
 	glDrawArrays(GL_TRIANGLES,0,6);
 	glDisableVertexAttribArray(0);
 	glBindBuffer(GL_ARRAY_BUFFER, 0);
+	glBindTexture(GL_TEXTURE_2D, 0);
 }
 
 Sprite::~Sprite()

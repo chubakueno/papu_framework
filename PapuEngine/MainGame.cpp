@@ -5,10 +5,12 @@
 void MainGame::run() {
 	init();
 	_sprites.push_back(new Sprite());
-	_sprites.back()->init(-1, -1, 1, 1, "Textures/Paper_Mario_.png");
+	_sprites.back()->init(0, -1, 2, 2, "Textures/Mario.png");
 
 	_sprites.push_back(new Sprite());
-	_sprites.back()->init(0, -1, 1, 1, "Textures/Paper_Mario_.png");
+	_sprites.back()->init(2, -1, 2, 2, "Textures/Star.png");
+	_sprites.push_back(new Sprite());
+	_sprites.back()->init(4, -1, 2, 2, "Textures/Mario.png");
 	update();
 }
 void MainGame::init() {
@@ -58,9 +60,7 @@ void MainGame::draw() {
 	_time+=0.002;
 
 	for (int i = 0; i < _sprites.size(); i++)
-	{
-		_sprites[i]->draw();
-	}
+		_sprites[i]->draw(_time);
 	_program.unuse();
 	SDL_GL_SwapWindow(_window);
 }
