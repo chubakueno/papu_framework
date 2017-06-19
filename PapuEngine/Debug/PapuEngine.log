@@ -1,20 +1,43 @@
-﻿  TextureCache.cpp
+﻿  Zombie.cpp
+  Window.cpp
+  TextureCache.cpp
+  SpriteBacth.cpp
+c:\users\sistema\documents\programacion\papu_framework\papuengine\spritebacth.cpp(15): warning C4018: '<': no coinciden signed/unsigned
+c:\users\sistema\documents\programacion\papu_framework\papuengine\spritebacth.cpp(44): warning C4018: '<': no coinciden signed/unsigned
+c:\users\sistema\documents\programacion\papu_framework\papuengine\spritebacth.cpp(72): warning C4018: '<': no coinciden signed/unsigned
   Sprite.cpp
-c:\users\intefi\downloads\papu-framework\papuengine\sprite.cpp(32): warning C4244: 'inicializando': conversión de 'double' a 'float'; posible pérdida de datos
   ResourceManager.cpp
+  Player.cpp
   picoPNG.cpp
+  PapuEngine.cpp
   MainGame.cpp
-c:\users\intefi\downloads\papu-framework\papuengine\maingame.cpp(60): warning C4305: '+=': truncamiento de 'double' a 'float'
-c:\users\intefi\downloads\papu-framework\papuengine\maingame.cpp(62): warning C4018: '<': no coinciden signed/unsigned
+c:\users\sistema\documents\programacion\papu_framework\papuengine\maingame.cpp(39): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
+c:\users\sistema\documents\programacion\papu_framework\papuengine\maingame.cpp(45): warning C4018: '<': no coinciden signed/unsigned
+c:\users\sistema\documents\programacion\papu_framework\papuengine\maingame.cpp(141): warning C4244: 'argumento': conversión de 'Sint32' a 'float'; posible pérdida de datos
   main.cpp
+  Level.cpp
+c:\users\sistema\documents\programacion\papu_framework\papuengine\level.cpp(38): warning C4018: '<': no coinciden signed/unsigned
+c:\users\sistema\documents\programacion\papu_framework\papuengine\level.cpp(40): warning C4018: '<': no coinciden signed/unsigned
+c:\users\sistema\documents\programacion\papu_framework\papuengine\level.cpp(64): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
+c:\users\sistema\documents\programacion\papu_framework\papuengine\level.cpp(65): warning C4244: '=': conversión de 'int' a 'float'; posible pérdida de datos
   IOManager.cpp
-c:\users\intefi\downloads\papu-framework\papuengine\iomanager.cpp(15): warning C4244: 'inicializando': conversión de 'std::streamoff' a 'int'; posible pérdida de datos
-c:\users\intefi\downloads\papu-framework\papuengine\iomanager.cpp(18): warning C4244: '-=': conversión de 'std::streamoff' a 'int'; posible pérdida de datos
+c:\users\sistema\documents\programacion\papu_framework\papuengine\iomanager.cpp(15): warning C4244: 'inicializando': conversión de 'std::streamoff' a 'int'; posible pérdida de datos
+c:\users\sistema\documents\programacion\papu_framework\papuengine\iomanager.cpp(18): warning C4244: '-=': conversión de 'std::streamoff' a 'int'; posible pérdida de datos
+  InputManager.cpp
   ImageLoader.cpp
-c:\users\intefi\downloads\papu-framework\papuengine\imageloader.cpp(36): warning C4244: '=': conversión de 'unsigned long' a 'float'; posible pérdida de datos
-c:\users\intefi\downloads\papu-framework\papuengine\imageloader.cpp(37): warning C4244: '=': conversión de 'unsigned long' a 'float'; posible pérdida de datos
+c:\users\sistema\documents\programacion\papu_framework\papuengine\imageloader.cpp(36): warning C4244: '=': conversión de 'unsigned long' a 'float'; posible pérdida de datos
+c:\users\sistema\documents\programacion\papu_framework\papuengine\imageloader.cpp(37): warning C4244: '=': conversión de 'unsigned long' a 'float'; posible pérdida de datos
+  Human.cpp
+c:\users\sistema\documents\programacion\papu_framework\papuengine\human.cpp(14): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
+c:\users\sistema\documents\programacion\papu_framework\papuengine\human.cpp(28): warning C4244: 'argumento': conversión de 'time_t' a 'unsigned int'; posible pérdida de datos
   GLS_Program.cpp
   Error.cpp
+  Camera2D.cpp
+  Bullet.cpp
   Generando código...
-  PapuEngine.vcxproj -> C:\Users\intefi\Downloads\papu-framework\Debug\PapuEngine.exe
-  PapuEngine.vcxproj -> C:\Users\intefi\Downloads\papu-framework\Debug\PapuEngine.pdb (Partial PDB)
+  Compilando...
+  Agent.cpp
+c:\users\sistema\documents\programacion\papu_framework\papuengine\agent.cpp(64): warning C4244: 'argumento': conversión de 'float' a 'const unsigned int'; posible pérdida de datos
+  Generando código...
+  PapuEngine.vcxproj -> C:\Users\Sistema\Documents\programacion\papu_framework\Debug\PapuEngine.exe
+  PapuEngine.vcxproj -> C:\Users\Sistema\Documents\programacion\papu_framework\Debug\PapuEngine.pdb (Partial PDB)
